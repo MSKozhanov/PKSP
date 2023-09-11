@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles2.css' %}">
+    <title>Kozhanov</title>
+</head>
+<body>
+    <div class="header">
+        <img src="https://is.gd/0qjA0j" alt="Здесь была картинка">
+    </div>
+    {% for article in articles %}
+    <div class="one-post">
+        <h2 class="post-title">{{ article.title }}</h2>
+        <div class="article-info">
+            <div class="article-author">
+                {{ article.author.username }}
+            </div>
+            <div class="article-created-date">
+                {{ article.created_date }}
+            </div>
+        </div>
+        <p class="article-text">
+            {{ article.get_excerpt }}
+        </p>
+    </div>
+    {% endfor %}
+</body>
+</html>

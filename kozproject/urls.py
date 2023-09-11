@@ -9,4 +9,6 @@ urlpatterns = [
     path('', init, name='init'),
     path('hello/', include('myapp.urls')),
     path('articles/', include('articles.urls')),
+    
+    
 ]

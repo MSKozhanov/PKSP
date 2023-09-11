@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles2.css">
+    <title>{{ article.title }}</title>
+</head>
+<body>
+    <div class="header">
+        <img src="https://is.gd/0qjA0j" alt="Здесь была картинка">
+    </div>
+    <div class="article-detail">
+        <h1 class="article-title-center">{{ article.title }}</h1>
+        <div class="article-info">
+            <div class="article-author">Автор: {{ article.author.username }}</div>
+            <div class="article-created-date">Дата создания: {{ article.created_date }}</div>
+        </div>
+        <div class="article-text">
+            {{ article.text|safe }}
+        </div>
+        <div class="all-articles-link">
+        <a href="http://127.0.0.1:8000/articles">Все статьи</http:>
+        </div>
+        
+    </div>
+</body>
+</html>
